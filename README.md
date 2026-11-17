@@ -70,3 +70,33 @@ Developed as part of an internship project.
 ---
 
 ORYNT – Prove Your Skills. Build Your Future.
+---
+
+## Application Screenshots
+
+### 1. Login Page
+![Login](screenshots/Login.png)
+
+### 2. Registration Page
+![Registration](screenshots/Registration.png)
+
+### 3. Dashboard
+![Dashboard](screenshots/Dashboard.png)
+
+### 4. Skill Assessment
+![Skill Assessment](screenshots/Assessment.png)
+
+### 5. Skill Gap Analysis
+![Skill Gap](screenshots/SkillGap.png)
+
+### 6. Learning Roadmap
+![Learning Roadmap](screenshots/Frontend.png)
+
+### 7. Learning Progress
+![Learning Progress](screenshots/LearningProgress.png)
+
+### 8. My Applications
+![My Applications](screenshots/MyApplications.png)
+
+### 9. My Projects
+![My Projects](screenshots/MyProjects.png)
