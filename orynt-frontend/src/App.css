@@ -1,0 +1,1769 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #17231f;
+  background: #f8faf8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+  background: #f8faf8;
+}
+
+.navbar {
+  height: 82px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e9efeb;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.brand-mark {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: #176b50;
+  border-radius: 11px;
+  font-size: 22px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.nav-links a,
+.login-link {
+  color: #64716b;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.login-link:hover {
+  color: #176b50;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-button {
+  padding: 12px 19px;
+  color: #ffffff;
+  background: #176b50;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+  background: #10533e;
+}
+
+.hero-section {
+  min-height: 650px;
+  padding: 90px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+  background:
+    radial-gradient(ellipse at 80% 45%, #e2f2e9 0%, transparent 42%),
+    #f8faf8;
+}
+
+.hero-content {
+  max-width: 590px;
+}
+
+.eyebrow,
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #176b50;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.status-dot,
+.footer-dot {
+  width: 8px;
+  height: 8px;
+  background: #36a778;
+  border-radius: 50%;
+}
+
+.hero-content h1 {
+  margin-top: 27px;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(42px, 5vw, 65px);
+  font-weight: 800;
+  line-height: 1.13;
+  letter-spacing: -2.8px;
+}
+
+.hero-content h1 span,
+.section-heading h2 span,
+.about-section h2 span {
+  color: #21845f;
+}
+
+.hero-description {
+  max-width: 510px;
+  margin-top: 24px;
+  color: #69766f;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 33px;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 49px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.primary-button {
+  color: #ffffff;
+  background: #176b50;
+}
+
+.secondary-button {
+  color: #176b50;
+  background: #ffffff;
+  border: 1px solid #dce8e0;
+}
+
+.secondary-button:hover {
+  background: #edf6f0;
+}
+
+.hero-note {
+  margin-top: 28px;
+  color: #849188;
+  font-size: 12px;
+}
+
+.hero-note span {
+  margin-right: 7px;
+  color: #21845f;
+}
+
+.hero-visual {
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.visual-glow {
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  background: #d9eee1;
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0.7;
+}
+
+.orbit {
+  position: absolute;
+  border: 1px solid #c9e2d3;
+  border-radius: 50%;
+}
+
+.orbit-one {
+  width: 410px;
+  height: 410px;
+}
+
+.orbit-two {
+  width: 480px;
+  height: 480px;
+  border-style: dashed;
+  opacity: 0.6;
+}
+
+.dashboard-card {
+  width: min(100%, 430px);
+  position: relative;
+  z-index: 2;
+  padding: 27px;
+  background: #ffffff;
+  border: 1px solid #e7eee9;
+  border-radius: 17px;
+  box-shadow: 0 25px 70px rgba(29, 75, 51, 0.13);
+}
+
+.dashboard-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.dashboard-label {
+  color: #849188;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-top h3 {
+  margin-top: 8px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+}
+
+.dashboard-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  color: #176b50;
+  background: #e8f4eb;
+  border-radius: 11px;
+}
+
+.progress-card {
+  margin-top: 27px;
+  padding: 17px;
+  background: #f5f9f6;
+  border: 1px solid #eaf1ec;
+  border-radius: 11px;
+}
+
+.progress-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 11px;
+}
+
+.progress-heading strong {
+  color: #21845f;
+  font-size: 10px;
+}
+
+.progress-track {
+  height: 7px;
+  margin-top: 15px;
+  overflow: hidden;
+  background: #dce9df;
+  border-radius: 20px;
+}
+
+.progress-value {
+  width: 8%;
+  height: 100%;
+  background: #21845f;
+  border-radius: 20px;
+}
+
+.progress-card small {
+  display: block;
+  margin-top: 10px;
+  color: #87948b;
+  font-size: 10px;
+}
+
+.dashboard-grid {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px;
+}
+
+.mini-card {
+  min-height: 103px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  border: 1px solid #edf1ed;
+  border-radius: 10px;
+}
+
+.mini-card > span {
+  font-size: 19px;
+}
+
+.mini-card strong {
+  font-size: 12px;
+}
+
+.mini-card small {
+  color: #8a968f;
+  font-size: 9px;
+}
+
+.dashboard-footer {
+  margin-top: 19px;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border-top: 1px solid #edf1ed;
+  color: #819087;
+  font-size: 10px;
+}
+
+.footer-dot {
+  width: 7px;
+  height: 7px;
+}
+
+.floating-tag {
+  position: absolute;
+  z-index: 3;
+  padding: 12px 16px;
+  color: #355747;
+  background: #ffffff;
+  border: 1px solid #e5eee7;
+  border-radius: 9px;
+  box-shadow: 0 8px 25px rgba(29, 75, 51, 0.09);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.floating-tag span {
+  margin-right: 7px;
+  color: #21845f;
+}
+
+.tag-top {
+  top: 37px;
+  right: -10px;
+}
+
+.tag-bottom {
+  bottom: 40px;
+  left: -20px;
+}
+
+.features-section {
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+.section-heading {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-heading h2,
+.about-section h2 {
+  margin-top: 20px;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(32px, 4vw, 45px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+.section-heading p {
+  margin-top: 17px;
+  color: #77847c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.features-grid {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.feature-card {
+  min-height: 260px;
+  padding: 25px 22px;
+  background: #fbfdfb;
+  border: 1px solid #e8eee9;
+  border-radius: 13px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(29, 75, 51, 0.08);
+}
+
+.feature-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feature-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  background: #eaf5ed;
+  border-radius: 12px;
+  font-size: 21px;
+}
+
+.feature-number {
+  color: #a7b2aa;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.feature-card h3 {
+  margin-top: 25px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+}
+
+.feature-card p {
+  min-height: 80px;
+  margin-top: 12px;
+  color: #77847c;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.feature-link {
+  display: inline-flex;
+  gap: 9px;
+  margin-top: 15px;
+  color: #176b50;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.about-section {
+  padding: 100px 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #edf6ef;
+}
+
+.about-section p {
+  max-width: 620px;
+  margin: 22px 0 30px;
+  color: #69766f;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.footer {
+  min-height: 105px;
+  padding: 25px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #ffffff;
+  border-top: 1px solid #e8eee9;
+}
+
+.footer .brand {
+  font-size: 19px;
+}
+
+.footer .brand-mark {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.footer p,
+.copyright {
+  color: #849188;
+  font-size: 11px;
+}
+
+@media (max-width: 1000px) {
+  .hero-section {
+    padding: 75px 6%;
+    gap: 25px;
+  }
+
+  .navbar {
+    padding: 0 6%;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .orbit-two {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 12px;
+  }
+
+  .login-link {
+    font-size: 12px;
+  }
+
+  .nav-button {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 70px 7%;
+    gap: 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;
+  }
+
+  .hero-visual {
+    min-height: 440px;
+  }
+
+  .dashboard-card {
+    padding: 20px;
+  }
+
+  .tag-top {
+    right: 0;
+  }
+
+  .tag-bottom {
+    left: 0;
+  }
+
+  .features-section {
+    padding: 75px 7%;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    margin-top: 35px;
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+
+  .feature-card p {
+    min-height: auto;
+  }
+
+  .about-section {
+    padding: 75px 7%;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* ORYNT Authentication Pages */
+
+.auth-page {
+  min-height: 100vh;
+  padding: 35px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 15% 20%, #e0f1e5, transparent 35%),
+    #f6faf7;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 42px;
+  background: #ffffff;
+  border: 1px solid #e5eee7;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(29, 75, 51, 0.09);
+}
+
+.auth-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 38px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.auth-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.auth-heading h1 {
+  margin-top: 13px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 27px;
+  letter-spacing: -0.8px;
+}
+
+.auth-heading p {
+  margin-top: 10px;
+  color: #7a8980;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.auth-form label {
+  margin-top: 9px;
+  color: #35463c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.auth-form input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  color: #26372e;
+  background: #fbfdfb;
+  border: 1px solid #dfe9e1;
+  border-radius: 8px;
+  outline: none;
+  font: inherit;
+  font-size: 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-form input:focus {
+  border-color: #21845f;
+  box-shadow: 0 0 0 3px rgba(33, 132, 95, 0.1);
+}
+
+.auth-form input::placeholder {
+  color: #a2ada5;
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.auth-message {
+  padding: 11px;
+  color: #176b50;
+  background: #edf7f0;
+  border-radius: 7px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.auth-switch {
+  margin-top: 25px;
+  color: #7a8980;
+  text-align: center;
+  font-size: 12px;
+}
+
+.auth-switch a {
+  color: #176b50;
+  font-weight: 800;
+}
+
+.back-home {
+  display: block;
+  margin-top: 25px;
+  color: #718078;
+  text-align: center;
+  font-size: 12px;
+}
+
+.back-home:hover {
+  color: #176b50;
+}
+
+/* ORYNT Dashboard */
+
+.dashboard-page {
+  min-height: 100vh;
+  background: #f7faf7;
+}
+
+.dashboard-navbar {
+  min-height: 75px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e8eee9;
+}
+
+.logout-button {
+  padding: 11px 19px;
+  color: #176b50;
+  background: #edf6ef;
+  border: 1px solid #dcebe0;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #e0f0e5;
+}
+
+.dashboard-content {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 65px 30px;
+}
+
+.dashboard-content > h1 {
+  margin-top: 16px;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 4vw, 43px);
+  letter-spacing: -1.5px;
+}
+
+.dashboard-content > h1 span {
+  color: #21845f;
+}
+
+.dashboard-intro {
+  margin-top: 13px;
+  color: #77847c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.welcome-card {
+  margin-top: 35px;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #ffffff;
+  background: #176b50;
+  border-radius: 15px;
+}
+
+.welcome-card .section-label {
+  color: #c4e8d1;
+}
+
+.welcome-card h2 {
+  max-width: 550px;
+  margin-top: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 25px;
+}
+
+.welcome-card p {
+  margin-top: 10px;
+  color: #d5e9dc;
+  font-size: 13px;
+}
+
+.welcome-icon {
+  color: #b8e2c7;
+  font-size: 55px;
+}
+
+.dashboard-section-title {
+  margin-top: 48px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 21px;
+}
+
+.dashboard-features {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.dashboard-feature-card {
+  padding: 23px;
+  background: #ffffff;
+  border: 1px solid #e6eee8;
+  border-radius: 12px;
+}
+
+.dashboard-feature-icon {
+  font-size: 25px;
+}
+
+.dashboard-feature-card h3 {
+  margin-top: 17px;
+  font-size: 14px;
+}
+
+.dashboard-feature-card p {
+  min-height: 65px;
+  margin-top: 10px;
+  color: #7c8981;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.coming-soon {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 7px 10px;
+  color: #176b50;
+  background: #edf6ef;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.dashboard-profile {
+  margin-top: 35px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e6eee8;
+  border-radius: 12px;
+}
+
+.dashboard-profile h3 {
+  margin-bottom: 15px;
+}
+
+.dashboard-profile p {
+  margin-top: 10px;
+  color: #69766f;
+  font-size: 13px;
+}
+
+@media (max-width: 750px) {
+  .auth-card {
+    padding: 30px 23px;
+  }
+
+  .dashboard-navbar {
+    padding: 0 6%;
+  }
+
+  .dashboard-content {
+    padding: 45px 6%;
+  }
+
+  .dashboard-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .welcome-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  .dashboard-features {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-icon {
+    display: none;
+  }
+}
+/* ORYNT Skill Gap Analysis */
+
+.skill-gap-page {
+  min-height: 100vh;
+  background: #f7faf7;
+}
+
+.back-dashboard {
+  color: #176b50;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.skill-gap-content {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 65px 30px 90px;
+}
+
+.skill-gap-content > h1 {
+  margin-top: 18px;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(35px, 5vw, 48px);
+  letter-spacing: -1.8px;
+}
+
+.skill-gap-content > h1 span {
+  color: #21845f;
+}
+
+.skill-gap-intro {
+  max-width: 650px;
+  margin-top: 15px;
+  color: #77847c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.skill-assessment-card {
+  margin-top: 35px;
+  padding: 35px;
+  background: #ffffff;
+  border: 1px solid #e6eee8;
+  border-radius: 15px;
+  box-shadow: 0 12px 35px rgba(29, 75, 51, 0.05);
+}
+
+.assessment-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.assessment-number {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #176b50;
+  background: #eaf5ed;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.assessment-heading h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
+}
+
+.assessment-heading p {
+  margin-top: 6px;
+  color: #87938b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.career-select {
+  width: 100%;
+  height: 50px;
+  margin-top: 22px;
+  padding: 0 15px;
+  color: #35463c;
+  background: #fbfdfb;
+  border: 1px solid #dfe9e1;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.career-select:focus {
+  border-color: #21845f;
+}
+
+.skills-heading {
+  margin-top: 38px;
+}
+
+.skill-selection-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.skill-option {
+  min-height: 49px;
+  padding: 11px 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #526158;
+  background: #fbfdfb;
+  border: 1px solid #e4ece6;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.skill-option.selected {
+  color: #176b50;
+  background: #edf7f0;
+  border-color: #83c49b;
+}
+
+.skill-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.skill-check {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #829087;
+  background: #ffffff;
+  border: 1px solid #d8e4db;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.skill-option.selected .skill-check {
+  color: #ffffff;
+  background: #21845f;
+  border-color: #21845f;
+}
+
+.assessment-bottom {
+  margin-top: 30px;
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid #edf1ed;
+}
+
+.assessment-bottom > span {
+  color: #849188;
+  font-size: 12px;
+}
+
+.analyze-button {
+  border: none;
+  cursor: pointer;
+}
+
+.skill-results {
+  margin-top: 40px;
+}
+
+.skill-results > h2 {
+  margin-top: 15px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 25px;
+}
+
+.result-card {
+  margin-top: 22px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: #ffffff;
+  border: 1px solid #e6eee8;
+  border-radius: 14px;
+}
+
+.result-percentage {
+  width: 115px;
+  height: 115px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #176b50;
+  background: #edf7f0;
+  border: 6px solid #cce8d4;
+  border-radius: 50%;
+}
+
+.result-percentage strong {
+  font-family: 'Manrope', sans-serif;
+  font-size: 28px;
+}
+
+.result-percentage span {
+  font-size: 10px;
+}
+
+.result-details {
+  flex: 1;
+}
+
+.result-details h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
+}
+
+.result-details p {
+  margin-top: 9px;
+  color: #77847c;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.result-progress {
+  height: 9px;
+  margin-top: 17px;
+  overflow: hidden;
+  background: #e7efe9;
+  border-radius: 20px;
+}
+
+.result-progress-value {
+  height: 100%;
+  background: #21845f;
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.result-columns {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.result-list {
+  padding: 23px;
+  background: #ffffff;
+  border: 1px solid #e6eee8;
+  border-radius: 12px;
+}
+
+.result-list h3 {
+  margin-bottom: 17px;
+  font-size: 14px;
+}
+
+.result-list p {
+  margin-top: 11px;
+  color: #77847c;
+  font-size: 12px;
+}
+
+.result-list .skill-have {
+  color: #21845f;
+}
+
+.result-list .skill-missing {
+  color: #a66a37;
+}
+
+.assessment-disclaimer {
+  margin-top: 20px;
+  color: #849188;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 650px) {
+  .skill-gap-content {
+    padding: 45px 6%;
+  }
+
+  .skill-assessment-card {
+    padding: 22px;
+  }
+
+  .skill-selection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .assessment-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .result-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .result-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .skill-selection-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =================================
+   ORYNT - PERSONALIZED ROADMAP
+================================= */
+
+.roadmap-page {
+  min-height: 100vh;
+  padding: 65px 7%;
+  background:
+    radial-gradient(circle at 85% 10%, #e3f2e8, transparent 30%),
+    #f7faf7;
+}
+
+.roadmap-page > h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  text-align: center;
+  color: #17231f;
+}
+
+.roadmap-page > p {
+  margin-top: 13px;
+  color: #77847c;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.roadmap-card {
+  max-width: 850px;
+  margin: 45px auto 0;
+  padding: 38px;
+  background: #ffffff;
+  border: 1px solid #e6eee8;
+  border-radius: 17px;
+  box-shadow: 0 15px 45px rgba(29, 75, 51, 0.07);
+}
+
+.roadmap-card > h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 23px;
+  color: #176b50;
+}
+
+.roadmap-card > p {
+  margin-top: 9px;
+  color: #849188;
+  font-size: 13px;
+}
+
+.roadmap-step {
+  margin-top: 25px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #fbfdfb;
+  border: 1px solid #e6eee8;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.roadmap-step:hover {
+  transform: translateY(-3px);
+  border-color: #9acbad;
+  box-shadow: 0 10px 25px rgba(29, 75, 51, 0.06);
+}
+
+.roadmap-step > span:first-child {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #176b50;
+  background: #eaf5ed;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.roadmap-step h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  color: #26372e;
+}
+
+.roadmap-step p {
+  margin-top: 8px;
+  color: #77847c;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.roadmap-step > div > span {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 12px;
+  color: #a66a37;
+  background: #fff5e9;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .roadmap-page {
+    padding: 45px 6%;
+  }
+
+  .roadmap-card {
+    padding: 23px;
+    margin-top: 30px;
+  }
+
+  .roadmap-step {
+    padding: 17px;
+    gap: 13px;
+  }
+
+  .roadmap-card > h2 {
+    font-size: 19px;
+  }
+}
+/* ORYNT Interactive Learning Roadmap */
+
+.roadmap-header {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.roadmap-header h1 {
+  margin-top: 18px;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 4vw, 43px);
+  letter-spacing: -1.5px;
+}
+
+.roadmap-header h1 span {
+  color: #21845f;
+}
+
+.roadmap-card {
+  max-width: 900px;
+}
+
+.roadmap-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.roadmap-title h2 {
+  margin-top: 12px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 23px;
+  color: #176b50;
+}
+
+.roadmap-title p {
+  margin-top: 8px;
+  color: #849188;
+  font-size: 13px;
+}
+
+.roadmap-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  background: #eaf5ed;
+  border-radius: 13px;
+  font-size: 25px;
+}
+
+.roadmap-progress {
+  margin-top: 30px;
+  padding: 22px;
+  background: #f5f9f6;
+  border: 1px solid #e6eee8;
+  border-radius: 12px;
+}
+
+.roadmap-progress-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.roadmap-progress-heading h3 {
+  font-size: 14px;
+}
+
+.roadmap-progress-heading p {
+  margin-top: 7px;
+  color: #849188;
+  font-size: 11px;
+}
+
+.roadmap-progress-heading strong {
+  color: #176b50;
+  font-family: 'Manrope', sans-serif;
+  font-size: 25px;
+}
+
+.roadmap-progress-track {
+  height: 9px;
+  margin-top: 18px;
+  overflow: hidden;
+  background: #dce9df;
+  border-radius: 20px;
+}
+
+.roadmap-progress-fill {
+  height: 100%;
+  background: #21845f;
+  border-radius: 20px;
+  transition: width 0.35s ease;
+}
+
+.roadmap-list {
+  margin-top: 15px;
+}
+
+.roadmap-step.completed {
+  background: #f2faf4;
+  border-color: #a9d8b7;
+}
+
+.roadmap-step-number {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: #176b50;
+  background: #eaf5ed;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.roadmap-step.completed .roadmap-step-number {
+  color: #ffffff;
+  background: #21845f;
+}
+
+.roadmap-step-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.roadmap-step-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.roadmap-priority {
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.roadmap-priority.high {
+  color: #a65e2b;
+  background: #fff1e5;
+}
+
+.roadmap-priority.medium {
+  color: #176b50;
+  background: #eaf5ed;
+}
+
+.roadmap-step-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 12px;
+  color: #718078;
+  font-size: 11px;
+}
+
+.roadmap-step-actions {
+  margin-top: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.roadmap-resource {
+  color: #176b50;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.roadmap-resource:hover {
+  text-decoration: underline;
+}
+
+.roadmap-complete-button {
+  padding: 10px 15px;
+  color: #ffffff;
+  background: #176b50;
+  border: none;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.roadmap-complete-button:hover {
+  background: #10533e;
+}
+
+.roadmap-complete-button.completed-button {
+  color: #176b50;
+  background: #e3f2e8;
+}
+
+.roadmap-success {
+  margin-top: 25px;
+  padding: 18px;
+  color: #176b50;
+  background: #eaf7ed;
+  border: 1px solid #b9dfc3;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.roadmap-note {
+  margin-top: 20px;
+  color: #849188;
+  text-align: center;
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .roadmap-title {
+    align-items: flex-start;
+  }
+
+  .roadmap-title h2 {
+    font-size: 19px;
+  }
+
+  .roadmap-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 19px;
+  }
+
+  .roadmap-step {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .roadmap-step-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .roadmap-complete-button {
+    width: 100%;
+  }
+}
+.roadmap-generation {
+  margin-top: 35px;
+  padding: 28px;
+  border-radius: 16px;
+  background: #f0f8f6;
+  text-align: center;
+}
+
+.roadmap-generation h3 {
+  margin-bottom: 12px;
+  color: #163f38;
+}
+
+.roadmap-generation p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.roadmap-generation button {
+  margin-top: 10px;
+}
+
+.roadmap-success {
+  color: #16845b;
+  font-weight: 600;
+  margin-top: 20px;
+}
+/* ================================
+   ORYNT MY PROJECTS FORM
+================================ */
+
+.skill-assessment-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.skill-assessment-card form label {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #252525;
+}
+
+.skill-assessment-card form input,
+.skill-assessment-card form textarea,
+.skill-assessment-card form select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #d6dce2;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #222222;
+  font-size: 14px;
+  outline: none;
+}
+
+.skill-assessment-card form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.skill-assessment-card form input:focus,
+.skill-assessment-card form textarea:focus,
+.skill-assessment-card form select:focus {
+  border-color: #159b83;
+  box-shadow: 0 0 0 3px rgba(21, 155, 131, 0.12);
+}
+
+.skill-assessment-card form .assessment-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.skill-assessment-card form button {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .skill-assessment-card form input,
+  .skill-assessment-card form textarea,
+  .skill-assessment-card form select {
+    font-size: 14px;
+  }
+}
